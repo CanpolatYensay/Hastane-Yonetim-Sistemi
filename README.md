@@ -1,39 +1,20 @@
+
+
 HASTANE YÖNETİM SİSTEMİ
 
-Bir hastanenin temel süreçlerinin dijital ortamda yönetilmesini sağlayacak bir sistem. Projenin amacı hasta kayıtlarının, doktor ve klinik bilgilerinin, randevuların, ameliyatların, reçete ve ilaç süreçlerinin, laboratuvar sonuçlarının, yatak durumlarının, sigorta bilgilerinin ve faturalandırma işlemleri gibi süreçlerin doğru, hızlı ve güvenli bir şekilde yönetilmesi sağlamak.
+Proje Amacı
 
-Oluşturulabilecek Tablolar
+Hastane Yönetim Sistemi, bir hastanenin günlük işleyişinde ortaya çıkan hasta, doktor, klinik, randevu, ameliyat, reçete, ilaç, laboratuvar, yatak, sigorta ve faturalandırma gibi temel süreçlerin tek bir dijital sistem üzerinden yönetilmesini amaçlayan bir projedir.
 
-Hasta: 
-hasta_id / hasta_adi / hasta_soyadi / dogum_tarihi / telefon
+Bir hastanın hastaneye geldiğini düşünelim. Hasta önce sisteme kaydedilir ve kişisel bilgileri oluşturulur. Daha sonra ihtiyaç duyduğu bölüme göre bir klinik ve doktor belirlenir. Hasta doktor için uygun bir tarihe ve saate randevu oluşturabilir. Randevu günü geldiğinde doktor hastayı muayene eder ve gerekli görülürse laboratuvar testleri ister. Yapılan testlerin sonuçları sistemde hastanın bilgileriyle ilişkilendirilerek saklanır. Böylece hastanın işlemleri farklı yerlerde veya birbirinden bağımsız kayıtlar içerisinde tutulmak yerine, aynı sistem içerisinde takip edilebilir.
 
-Doktor: 
-doktor_id / doktor_adi / doktor_soyadi / uzmanlik_id / klinik_id 
+Eğer hastanın ameliyat olması gerekiyorsa ameliyat bilgileri yine hasta ve doktor ile ilişkilendirilerek sisteme kaydedilir. Hastanede yatış gerektiğinde ise uygun klinikteki yatakların durumu kontrol edilir ve hastaya uygun bir yatak atanabilir. Doktor tarafından ilaç tedavisi uygulandığında reçete bilgileri sisteme eklenir. Reçetede kullanılan ilaçların stok miktarları da takip edilerek kritik seviyeye düşen ilaçların belirlenmesi sağlanabilir.
 
-Klinik:
-klinik_id / klinik_adi
+Tedavi sürecinin sonunda hastaya ait işlemler ve ücretler faturalandırılabilir. Hastanın sigorta bilgileri de sistemde tutulduğu için ödeme ve sigorta süreçlerinin takibi yapılabilir. Böylece hastanın hastaneye girişinden tedavi sürecinin tamamlanmasına ve faturalandırmaya kadar geçen süreç bütünleşik bir yapı içerisinde yönetilmiş olur.
 
-Yatak:
-yatak_id / klinik_id / yatak_durumu
+Genel Akış
 
-Randevu:
-randevu_id / hasta_id / doktor_id / randevu_tarihi / randevu_saati
+Hasta Kaydı → Randevu → Muayene → Laboratuvar / Reçete → Ameliyat veya Yatış → Tedavi Süreci → Faturalandırma / Sigorta
 
-Ameliyat:
-ameliyat_id / hasta_id / doktor_id / ameliyat_tarihi / ameliyat_saati
 
-Reçete:
-recete_id / hasta_id / doktor_id / recete_tarihi
-
-İlaç:
-ilac_id / ilac_adi / stok_miktari / kritik_stok
-
-Laboratuvar Sonucu:
-sonuc_id / hasta_id / test_adi / test_sonucu / test_tarihi
-
-Fatura:
-fatura_id / hasta_id / fatura_tutari / odeme_durumu
-
-Sigorta:
-sigorta_id / hasta_id / sigorta_kurumu
 
